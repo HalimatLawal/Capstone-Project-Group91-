@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <!--Font from google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .order_plan .plan_desc .plan_type .plan_name,
+      .order_desc #first_header,
+      .order_btn .cancel_btn:hover {
+        color: hsl(223, 47%, 23%);
+        font-weight: 900;
+      }
+      .order_desc #order_paragraph,
+      .plan_price,
+      .order_btn .cancel_btn {
+        color: hsl(224, 23%, 55%);
+      }
+
+      .container {
+        width: 1140;
+        font-size: 16px;
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 500;
+        background-image: url("./images/pattern-background-desktop.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: hsl(225, 100%, 94%);
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .order_summary_container {
+        border-radius: 10px;
+        background-color: hsl(0, 0%, 100%);
+        width: 450px;
+        justify-content: center;
+        align-items: center;
+      }
+      .img_container img {
+        width: 450px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      .order_desc {
+        padding: 1.5rem;
+      }
+
+      .order_desc #first_header {
+        text-align: center;
+      }
+      .order_desc #order_paragraph {
+        text-align: center;
+        padding: 12px;
+      }
+      .order_plan {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: hsl(225, 100%, 98%);
+        padding-right: 20px;
+        padding-left: 20px;
+        border-radius: 5%;
+        margin: 20px 0px;
+      }
+      .order_plan .plan_desc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .order_plan .plan_desc img {
+        margin-right: 15px;
+      }
+      .order_plan .plan_desc .plan_type .plan_name {
+        line-height: 2px;
+        padding-top: 5px;
+      }
+      .order_plan .change_plan a {
+        font-weight: 700;
+      }
+      .order_plan .change_plan a:hover {
+        text-decoration: none;
+        color: hsl(245, 75%, 52%);
+      }
+      .order_btn button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: hsl(245, 75%, 52%);
+        color: hsl(0, 0%, 100%);
+        border: none;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        font-weight: 900;
+      }
+
+      .order_btn .btn {
+        box-shadow: 0px 18px 4px hsl(244, 68%, 91%);
+      }
+      .order_btn .cancel_btn {
+        background-color: transparent;
+      }
+      .order_btn .btn:hover {
+        background-color: hsl(245, 88%, 70%);
+      }
+
+      @media (max-width: 375px) {
+        .container {
+          background-image: url("images/pattern-background-mobile.svg");
+          margin: 0%;
+          padding: 0%;
+        }
+        .order_summary_container {
+          width: 100%;
+        }
+        .img_container {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="order_summary_container">
+        <div class="img_container">
+          <img src="./images/illustration-hero.svg" alt="hero image" />
+        </div>
+        <div class="order_desc">
+          <h2 id="first_header">Order Summary</h2>
+          <p id="order_paragraph">
+            You can now listen to millions of songs, audiobooks, and podcasts on
+            any device anywhere you like!
+          </p>
+          <div class="order_plan">
+            <div class="plan_desc">
+              <img src="./images/icon-music.svg" alt="music icon" />
+              <div class="plan_type">
+                <h3 class="plan_name">Annual Plan</h3>
+                <p class="plan_price">$59.99/year</p>
+              </div>
+            </div>
+            <div class="change_plan">
+              <a href="#">Change</a>
+            </div>
+          </div>
+          <div class="order_btn">
+            <button class="btn">Proceed to Payment</button>
+            <button class="cancel_btn">Cancel Order</button>
+          </div>
+        </div>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">GROUP 91</a>.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
